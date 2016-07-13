@@ -47,6 +47,20 @@ var fs = require('fs');
 	 	//console.log(productMap);
 	 	return productMap;
 	};
+	exports.groupedList = function(productMap){
+
+		groupedSales = {};
+
+		for(var key in productMap){
+			
+
+			groupedSales = {
+				product : key,
+			 	quantity: productMap[key]
+			}
+		}
+		return groupedSales;
+	}
 	exports.salesPerWeek = function(productList){
 		//console.log(productList);
 		var weeklySales = {};
@@ -71,6 +85,7 @@ var fs = require('fs');
 				max = productMap[key];
 
 				mostPopularProduct = {
+					desc:"Most popular product",
 					product : key,
 					quantity: max
 				};
@@ -86,6 +101,7 @@ var fs = require('fs');
 				min = productMap[key];
 
 				leastPopularProduct = {
+					desc : "Least popular product",
 					product : key,
 					quantity: min
 				};
@@ -124,7 +140,6 @@ var fs = require('fs');
  			var prodQty = productMap[product];
  			catMap[category] = catMap[category] + prodQty; 
  		}
-        console.log(catMap);
  		var mostPopularCategory = {};
  		var max = 0;
 
@@ -133,6 +148,7 @@ var fs = require('fs');
  			if(catMap[cat] > max){
  				max = catMap[cat];
  				mostPopularCategory = {
+ 					desc: "Most popular category",
  					category: cat,
  					quantity: max
  				}
@@ -163,6 +179,7 @@ var fs = require('fs');
  			if(catMap[cat] < min){
  				min = catMap[cat];
  				leastPopularCategory = {
+ 					desc: "Least popular category",
  					category: cat,
  					quantity: min
  				}
@@ -185,6 +202,7 @@ var fs = require('fs');
  	exports.mostProfitableProd = function(productList,purchasesList){
  		var max = 0;
  		var mostProfitableProdObj
+ 		
  		purchasesList.forEach(function(purchase){
  			productList.forEach(function(sale){
  				if(purchase.productName === sale.productName){
@@ -194,7 +212,8 @@ var fs = require('fs');
  					max = profit;
 
  					mostProfitableProdObj = {
- 						productName : purchase.item,
+ 						desc: "Most profitable product",
+ 						product : purchase.item,
  						profitAmount : max
  					};
  				}

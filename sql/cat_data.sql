@@ -1,0 +1,10 @@
+INSERT INTO categories (cat_name) VALUES ("Bakery");
+INSERT INTO categories (cat_name) VALUES ("Bulk");
+INSERT INTO categories (cat_name) VALUES ("Confectionary");
+INSERT INTO categories (cat_name) VALUES ("Cosmetics");
+INSERT INTO categories (cat_name) VALUES ("Fruit");
+INSERT INTO categories (cat_name) VALUES ("Fizzy Drinks");
+INSERT INTO categories (cat_name) VALUES ("Canned Food");
+INSERT INTO categories (cat_name) VALUES ("Valentines Goodies");
+INSERT INTO categories (cat_name) VALUES ("Soup");
+INSERT INTO categories (cat_name) VALUES ("Dairy Products");

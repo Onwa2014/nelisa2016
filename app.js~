@@ -1,0 +1,14 @@
+var handlebars = require('handlebars'); //reqire handlebars
+var fs = require('fs'); // require fs module
+
+var popularProd = require('./products'); // js file that provides data
+
+var productList = popularProd.salesData('./csv-files/week1.csv');
+var productMap = popularProd.groupByQuantity(productList);
+var week1PopProduct = popularProd.mostPopularProd(productMap); //content that I want to display
+
+var source = fs.readFileSync('./views/layouts/products.hbs', "utf8");
+var template = handlebars.compile(source);
+var context = week1PopProduct;
+var result = template(context);
+fs.writeFileSync('product.html', result);

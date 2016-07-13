@@ -1,0 +1,30 @@
+{
+  "name": "nelisa2016",
+  "version": "0.0.0",
+  "description": "nelisa spaza app",
+  "main": "products.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "handlebars": "~4.0.5",
+    "express": "~4.14.0",
+    "exphbs": "~1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "~2.1.0",
+    "express-handlebars": "~3.0.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Onwa2014/nelisa2016.git"
+  },
+  "author": "Onwaba",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Onwa2014/nelisa2016/issues"
+  }
+}

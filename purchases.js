@@ -80,7 +80,6 @@ exports.profitMapping = function(weeklyPurchases, weeklySales){
       }
     }
    }
-   console.log(profitMap);
  	return profitMap;
 };
 
@@ -92,12 +91,13 @@ exports.mostProfitableProduct = function(profitMap){
     if(profitMap[key] > max){
       max = profitMap[key];
       profitObj = {
-        productName : key,
-        qty : max
+        desc: "Most Profitable Product",
+        product : key,
+        profitAmount : max
       }
     }
   }
-  console.log(profitObj);
+  
   return profitObj;
 }
 
@@ -141,8 +141,9 @@ exports.catProfit = function(profitMap){
       if(catProfitMap[cat] > max){
         max = catProfitMap[cat];
         mostProfitableCategory = {
+          desc: "Most Profitable Category",
           category: cat,
-          profit: max
+          profitAmount: max
         }
       }
     }
